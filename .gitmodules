@@ -26,12 +26,21 @@
 [submodule "3rdparty/type_safe"]
 	path = 3rdparty/type_safe
 	url = https://github.com/foonathan/type_safe
-[submodule "3rdparty/debug_assert"]
-	path = 3rdparty/debug_assert
-	url = https://github.com/foonathan/debug_assert
 [submodule "gtirb"]
 	path = gtirb
 	url = https://github.com/jevinskie/gtirb
 [submodule "ddisasm"]
 	path = ddisasm
 	url = https://github.com/jevinskie/ddisasm
+[submodule "3rdparty/zstring_view"]
+	path = 3rdparty/zstring_view
+	url = https://github.com/jeremy-rifkin/zstring_view
+[submodule "3rdparty/enchantum"]
+	path = 3rdparty/enchantum
+	url = https://github.com/ZXShady/enchantum
+[submodule "3rdparty/cpptrace"]
+	path = 3rdparty/cpptrace
+	url = https://github.com/jeremy-rifkin/cpptrace
+[submodule "gtirb-pprinter"]
+	path = gtirb-pprinter
+	url = https://github.com/jevinskie/gtirb-pprinter
