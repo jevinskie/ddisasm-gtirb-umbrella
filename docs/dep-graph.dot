@@ -23,7 +23,7 @@ digraph dep {
     capstone
     googletest
     capstone -> gtirb
-    googletest -> protobuf
+    googletest -> gtirb
     protobuf -> gtirb
 
     ddisasm
