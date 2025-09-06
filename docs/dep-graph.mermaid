@@ -1,0 +1,25 @@
+---
+config:
+  theme: redux
+  layout: dagre
+title: Dependency Graph
+---
+flowchart TD
+    argparse("argparse")
+    cpptrace("cpptrace") --> libassert("libassert")
+    enchantum("enchantum") --> libassert
+    scnlib("scnlib")
+    type_safe("type_safe")
+    zstring_view("zstring_view")
+
+    protobuf("protobuf") --> abseil-cpp("abseil-cpp")
+
+    capstone("capstone")
+
+    gtirb("gtirb") --> capstone & googletest("googletest") & protobuf
+    gtirb-pprinter("gtirb-pprinter") --> gtirb
+
+    fmt("fmt") --> LIEF("LIEF")
+
+    ddisasm("ddisasm") --> capstone & gtirb & LIEF
+

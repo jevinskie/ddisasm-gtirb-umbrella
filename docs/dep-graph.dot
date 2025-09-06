@@ -1,0 +1,33 @@
+digraph dep {
+    ordering="out";
+
+    argparse
+    scnlib
+    type_safe
+    zstring_view
+
+    cpptrace
+    enchantum
+    libassert
+    cpptrace -> libassert
+    enchantum -> libassert
+
+    abseil
+    protobuf
+    abseil -> protobuf
+
+    fmt
+    LIEF
+    fmt -> LIEF
+
+    capstone
+    googletest
+    capstone -> gtirb
+    googletest -> protobuf
+    protobuf -> gtirb
+
+    ddisasm
+    capstone -> ddisasm
+    gtirb -> ddisasm
+    LIEF -> ddisasm
+}

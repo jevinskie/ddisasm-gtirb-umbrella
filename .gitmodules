@@ -44,3 +44,6 @@
 [submodule "gtirb-pprinter"]
 	path = gtirb-pprinter
 	url = https://github.com/jevinskie/gtirb-pprinter
+[submodule "3rdparty/libassert"]
+	path = 3rdparty/libassert
+	url = https://github.com/jeremy-rifkin/libassert
