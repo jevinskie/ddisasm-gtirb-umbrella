@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_subdirectory(3rdparty)
 
-# add_subdirectory(gtirb)
+add_subdirectory(gtirb)

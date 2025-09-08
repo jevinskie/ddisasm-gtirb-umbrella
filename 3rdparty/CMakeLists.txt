@@ -51,16 +51,21 @@ add_subdirectory(libassert EXCLUDE_FROM_ALL)
 
 add_subdirectory(argparse EXCLUDE_FROM_ALL)
 
+option(ABSL_ENABLE_INSTALL "" ON)
+option(ABSL_USE_EXTERNAL_GOOGLETEST "" ON)
+option(ABSL_FIND_GOOGLETEST "" OFF)
 add_subdirectory(abseil-cpp EXCLUDE_FROM_ALL)
+# add_subdirectory(abseil-cpp)
 
 option(protobuf_BUILD_PROTOBUF_BINARIES "" ON)
-option(protobuf_INSTALL "" OFF)
+option(protobuf_INSTALL "" ON)
 option(protobuf_BUILD_TESTS "" OFF)
 option(protobuf_BUILD_LIBUPB "" OFF)
 option(protobuf_LOCAL_DEPENDENCIES_ONLY "" ON)
-option(protobuf_MODULE_COMPATIBLE "" OFF)
+option(protobuf_MODULE_COMPATIBLE "" ON)
 option(protobuf_DEPRECATED_CMAKE_SUBDIRECTORY_USAGE "" OFF)
 add_subdirectory(protobuf EXCLUDE_FROM_ALL)
+include(${CMAKE_CURRENT_SOURCE_DIR}/protobuf/cmake/protobuf-generate.cmake)
 
 # add_subdirectory(boost EXCLUDE_FROM_ALL)
 
