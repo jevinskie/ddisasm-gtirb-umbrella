@@ -41,9 +41,9 @@ target_include_directories(libzstd_static
 option(BUILD_DWARFDUMP "" OFF)
 add_subdirectory(libdwarf-lite EXCLUDE_FROM_ALL)
 
-# option(CPPTRACE_USE_EXTERNAL_ZSTD "" ON)
-# option(CPPTRACE_USE_EXTERNAL_LIBDWARF "" ON)
-# add_subdirectory(cpptrace EXCLUDE_FROM_ALL)
+option(CPPTRACE_USE_EXTERNAL_ZSTD "" ON)
+option(CPPTRACE_USE_EXTERNAL_LIBDWARF "" ON)
+add_subdirectory(cpptrace EXCLUDE_FROM_ALL)
 # add_subdirectory(enchantum EXCLUDE_FROM_ALL)
 # option(LIBASSERT_USE_EXTERNAL_CPPTRACE "" ON)
 # option(LIBASSERT_USE_EXTERNAL_ENCHANTUM "" ON)
