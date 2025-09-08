@@ -28,6 +28,7 @@ add_subdirectory(scnlib EXCLUDE_FROM_ALL)
 
 option(ZSTD_LEGACY_SUPPORT "" OFF)
 option(ZSTD_BUILD_PROGRAMS "" OFF)
+option(ZSTD_BUILD_TESTS "" OFF)
 # option(ZSTD_BUILD_STATIC "" ON)
 # option(ZSTD_BUILD_SHARED "" OFF)
 add_subdirectory(zstd/build/cmake EXCLUDE_FROM_ALL)
