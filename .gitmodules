@@ -29,6 +29,7 @@
 [submodule "gtirb"]
 	path = gtirb
 	url = https://github.com/jevinskie/gtirb
+	branch = jev/main
 [submodule "ddisasm"]
 	path = ddisasm
 	url = https://github.com/jevinskie/ddisasm
@@ -47,3 +48,9 @@
 [submodule "3rdparty/libassert"]
 	path = 3rdparty/libassert
 	url = https://github.com/jeremy-rifkin/libassert
+[submodule "3rdparty/boost"]
+	path = 3rdparty/boost
+	url = https://github.com/boostorg/boost
+[submodule "3rdparty/debug_assert"]
+	path = 3rdparty/debug_assert
+	url = https://github.com/foonathan/debug_assert
