@@ -58,6 +58,7 @@ option(protobuf_INSTALL "" OFF)
 option(protobuf_BUILD_TESTS "" OFF)
 option(protobuf_BUILD_LIBUPB "" OFF)
 option(protobuf_LOCAL_DEPENDENCIES_ONLY "" ON)
+option(protobuf_MODULE_COMPATIBLE "" OFF)
 add_subdirectory(protobuf EXCLUDE_FROM_ALL)
 
 # add_subdirectory(boost EXCLUDE_FROM_ALL)
