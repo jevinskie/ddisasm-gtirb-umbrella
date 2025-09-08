@@ -1,4 +1,9 @@
 add_subdirectory(googletest EXCLUDE_FROM_ALL)
+
+option(BENCHMARK_ENABLE_TESTING "" OFF)
+option(BENCHMARK_ENABLE_INSTALL "" OFF)
+option(BENCHMARK_INSTALL_DOCS "" OFF)
+option(BENCHMARK_INSTALL_TOOLS "" OFF)
 add_subdirectory(benchmark EXCLUDE_FROM_ALL)
 
 # add_subdirectory(boost EXCLUDE_FROM_ALL)
