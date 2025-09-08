@@ -12,6 +12,8 @@ add_library(zstring_view INTERFACE)
 target_include_directories(zstring_view INTERFACE zstring_view/include)
 
 add_subdirectory(debug_assert EXCLUDE_FROM_ALL)
+
+option(TYPE_SAFE_BUILD_TEST_EXAMPLE "" OFF)
 add_subdirectory(type_safe EXCLUDE_FROM_ALL)
 
 add_subdirectory(fmt EXCLUDE_FROM_ALL)
