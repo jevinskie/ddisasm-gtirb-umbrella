@@ -1,4 +1,7 @@
 add_subdirectory(googletest EXCLUDE_FROM_ALL)
+add_subdirectory(benchmark EXCLUDE_FROM_ALL)
+
+# add_subdirectory(boost EXCLUDE_FROM_ALL)
 
 add_library(zstring_view INTERFACE)
 target_include_directories(zstring_view INTERFACE zstring_view/include)
@@ -8,22 +11,44 @@ add_subdirectory(type_safe EXCLUDE_FROM_ALL)
 
 add_subdirectory(fmt EXCLUDE_FROM_ALL)
 
+add_subdirectory(fast_float EXCLUDE_FROM_ALL)
+
+option(SCN_USE_EXTERNAL_GTEST "" ON)
+option(SCN_USE_EXTERNAL_BENCHMARK "" ON)
+option(SCN_USE_EXTERNAL_FAST_FLOAT "" ON)
+option(SCN_REGEX_BACKEND "" "re2")
 add_subdirectory(scnlib EXCLUDE_FROM_ALL)
 
-add_subdirectory(cpptrace EXCLUDE_FROM_ALL)
-add_subdirectory(enchantum EXCLUDE_FROM_ALL)
-option(LIBASSERT_USE_EXTERNAL_CPPTRACE "" ON)
-option(LIBASSERT_USE_EXTERNAL_ENCHANTUM "" ON)
-add_subdirectory(libassert EXCLUDE_FROM_ALL)
+option(ZSTD_LEGACY_SUPPORT "" OFF)
+option(ZSTD_BUILD_PROGRAMS "" OFF)
+# option(ZSTD_BUILD_STATIC "" ON)
+# option(ZSTD_BUILD_SHARED "" OFF)
+add_subdirectory(zstd/build/cmake EXCLUDE_FROM_ALL)
+target_include_directories(libzstd_static
+    PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/zstd/lib>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/zstd/lib/common>
+)
 
-add_subdirectory(argparse EXCLUDE_FROM_ALL)
+option(BUILD_DWARFDUMP "" OFF)
+add_subdirectory(libdwarf-lite EXCLUDE_FROM_ALL)
 
-add_subdirectory(abseil-cpp EXCLUDE_FROM_ALL)
+# option(CPPTRACE_USE_EXTERNAL_ZSTD "" ON)
+# option(CPPTRACE_USE_EXTERNAL_LIBDWARF "" ON)
+# add_subdirectory(cpptrace EXCLUDE_FROM_ALL)
+# add_subdirectory(enchantum EXCLUDE_FROM_ALL)
+# option(LIBASSERT_USE_EXTERNAL_CPPTRACE "" ON)
+# option(LIBASSERT_USE_EXTERNAL_ENCHANTUM "" ON)
+# add_subdirectory(libassert EXCLUDE_FROM_ALL)
 
-option(protobuf_INSTALL "" OFF)
-option(protobuf_BUILD_TESTS "" OFF)
-add_subdirectory(protobuf EXCLUDE_FROM_ALL)
+# add_subdirectory(argparse EXCLUDE_FROM_ALL)
 
-add_subdirectory(boost EXCLUDE_FROM_ALL)
+# add_subdirectory(abseil-cpp EXCLUDE_FROM_ALL)
 
-add_subdirectory(capstone EXCLUDE_FROM_ALL)
+# option(protobuf_INSTALL "" OFF)
+# option(protobuf_BUILD_TESTS "" OFF)
+# add_subdirectory(protobuf EXCLUDE_FROM_ALL)
+
+# # add_subdirectory(boost EXCLUDE_FROM_ALL)
+
+# add_subdirectory(capstone EXCLUDE_FROM_ALL)

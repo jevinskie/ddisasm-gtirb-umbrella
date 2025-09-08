@@ -54,3 +54,15 @@
 [submodule "3rdparty/debug_assert"]
 	path = 3rdparty/debug_assert
 	url = https://github.com/foonathan/debug_assert
+[submodule "3rdparty/benchmark"]
+	path = 3rdparty/benchmark
+	url = https://github.com/google/benchmark
+[submodule "3rdparty/fast_float"]
+	path = 3rdparty/fast_float
+	url = https://github.com/fastfloat/fast_float
+[submodule "3rdparty/libdwarf-lite"]
+	path = 3rdparty/libdwarf-lite
+	url = https://github.com/jeremy-rifkin/libdwarf-lite
+[submodule "3rdparty/zstd"]
+	path = 3rdparty/zstd
+	url = https://github.com/facebook/zstd
