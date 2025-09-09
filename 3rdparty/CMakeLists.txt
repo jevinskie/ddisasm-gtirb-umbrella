@@ -68,7 +68,7 @@ option(protobuf_DEPRECATED_CMAKE_SUBDIRECTORY_USAGE "" OFF)
 add_subdirectory(protobuf EXCLUDE_FROM_ALL)
 include(${CMAKE_CURRENT_SOURCE_DIR}/protobuf/cmake/protobuf-generate.cmake)
 
-add_subdirectory(boost EXCLUDE_FROM_ALL)
+find_package(Boost 1.89.0 REQUIRED COMPONENTS headers graph CONFIG GLOBAL)
 
 option(CAPSTONE_BUILD_MACOS_THIN "" ON)
 option(CAPSTONE_BUILD_DIET "" OFF)
